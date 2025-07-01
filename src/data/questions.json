@@ -1,0 +1,108 @@
+{
+    "easy": {
+        "rules": "play to win",
+        "description": "having 3 - 4 characters in each word",
+        "data": [
+            {
+                "question": "pen",
+                "mean": "Bút mực",
+                "key": "học tập"
+            },
+            {
+                "question": "cat",
+                "mean": "Con mèo",
+                "key": "động vật"
+            },
+            {
+                "question": "dog",
+                "mean": "Con chó",
+                "key": "động vật"
+            },
+            {
+                "question": "book",
+                "mean": "Cuốn sách",
+                "key": "học tập"
+            },
+            {
+                "question": "fish",
+                "mean": "Con cá",
+                "key": "động vật"
+            },
+            {
+                "question": "car",
+                "mean": "Xe hơi",
+                "key": "phương tiện"
+            },
+            {
+                "question": "sun",
+                "mean": "Mặt trời",
+                "key": "thiên nhiên"
+            },
+            {
+                "question": "moon",
+                "mean": "Mặt trăng",
+                "key": "thiên nhiên"
+            },
+            {
+                "question": "tree",
+                "mean": "Cây cối",
+                "key": "thiên nhiên"
+            },
+            {
+                "question": "home",
+                "mean": "Ngôi nhà",
+                "key": "nơi ở"
+            },
+            {
+                "question": "door",
+                "mean": "Cửa ra vào",
+                "key": "nội thất"
+            },
+            {
+                "question": "hand",
+                "mean": "Bàn tay",
+                "key": "cơ thể"
+            },
+            {
+                "question": "head",
+                "mean": "Đầu",
+                "key": "cơ thể"
+            },
+            {
+                "question": "food",
+                "mean": "Thức ăn",
+                "key": "ăn uống"
+            },
+            {
+                "question": "milk",
+                "mean": "Sữa",
+                "key": "ăn uống"
+            },
+            {
+                "question": "red",
+                "mean": "Màu đỏ",
+                "key": "màu sắc"
+            },
+            {
+                "question": "blue",
+                "mean": "Màu xanh",
+                "key": "màu sắc"
+            },
+            {
+                "question": "big",
+                "mean": "To lớn",
+                "key": "tính từ"
+            },
+            {
+                "question": "old",
+                "mean": "Già, cũ",
+                "key": "tính từ"
+            },
+            {
+                "question": "new",
+                "mean": "Mới",
+                "key": "tính từ"
+            }
+        ]
+    }
+}

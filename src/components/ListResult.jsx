@@ -1,0 +1,78 @@
+import { useState, useEffect } from 'react';
+
+export default function ListResult({answers, question, response}) {
+    const items = answers;
+    const [turns, setTurns] = useState();
+    
+    useEffect(() => {
+        if(items.length === 0) setTurns(initTurnGame(question));
+        checkWin();
+        if(items.length > 0) {
+            setTurns(turns - 1);
+        }
+    }, [items]);
+
+    useEffect(() => {
+        if(turns === 0) {
+            response(false);
+        }
+    }, [turns]);
+
+    function checkIndex(index, item) {
+        if(question[index] == item) return 'bg-green-600';
+        if(question.includes(item)) return 'bg-orange-400';
+        else return 'bg-red-600';
+    }
+
+    function checkWin() {
+        if(items.length === 0) return;
+        const result = items[items.length - 1].map((item, index) => {
+            if(item === question[index]) {
+                return 1;
+            } else if(question.includes(item)) {
+                return -1;
+            } else {
+                return 0;
+            }
+        });
+        if(!result.includes(-1) && !result.includes(0)) {
+            response(true);
+        }
+    }
+
+    function initTurnGame(question) {
+        switch (true) {
+            case question.length <= 4:
+                return 3;
+            case question.length <= 7:
+                return 5;
+            default:
+                return 7;
+        }
+    }
+
+
+    return (
+        <div>
+            <h1 className='text-white'>{turns}</h1>
+            {items.map((items, index) => {
+                return (
+                    <ul 
+                        className="flex"
+                        key={index}>
+                        {items.map((child, index) => {
+                            return (
+                                <li
+                                    className={`flex justify-center items-center m-1 text-2xl uppercase rounded w-10 h-10 text-white
+                                    ${checkIndex(index, child)}`}
+                                    key={index}
+                                    data-answer={checkIndex(index, child)}
+                                >{child}</li>
+                            )
+                        })}
+                    </ul>
+                )
+            })}
+        </div>
+    )
+}
