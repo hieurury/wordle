@@ -1,20 +1,20 @@
 import { useEffect, useState, useRef } from 'react';
 
-export default function ListInput({ data, response, resetTrigger, clearInput }) {
+export default function ListInput({ data, response, clearInput }) {
     const [value, setValue] = useState([]);
     const [randomIndex, setRandomIndex] = useState([]);
     const inputsRef = useRef([]);
 
-    //đảm bảo độ dài của value bằng data để tránh gặp lỗi khi response
-    useEffect(() => {
-        value.length = data.length;
-    }, [data]);
-
     useEffect(() => {
         // Xóa giá trị của các input khi clearInput được gọi
         if(clearInput) {
-            setValue([]);
-            console.log(value);
+            //lấy lại value cũ
+            const odValue = [...value];
+            //lập qua toàn bộ mảng value, chỉ giữ lại những giá trị có trong ramdomIndex
+            const newValue = odValue.map((item, index) => {
+                return randomIndex.includes(index) ? item : '';
+            });
+            setValue(newValue);
         }
     }, [clearInput]);
 
@@ -31,51 +31,35 @@ export default function ListInput({ data, response, resetTrigger, clearInput }) 
     //cập nhật lại các gợi ý khi dữ liệu câu hỏi thay đổi
     useEffect(() => {
         const length = data.length;
-        switch (true) {
-            case length < 5:
-                randomGenarator(1);
-                break;
-            case length < 8:
-                randomGenarator(2);
-                break;
-            case length < 10:
-                randomGenarator(3);
-                break;
-            default:
-                randomGenarator(4);
-                break;
-        }
-        function randomGenarator(len) {
-            if(data.length === 0) return;
-            if(randomIndex.length >= len) return;
-            //tạo số ngẫu nhiên
-            const randomNumber = Math.floor(Math.random() * data.length);
-            //nếu số đó có rồi thì tạo lại
-            if(randomIndex.includes(randomNumber)) {
-                randomGenarator(len);
-            } else {
-                //nếu chưa có thì thêm vào mảng
-                setRandomIndex([...randomIndex, randomNumber]);
-                const newValue = [...value];
-                newValue[randomNumber] = data[randomNumber];
-                setValue(newValue);
+        if(length == 0) return; //nếu không có dữ liệu câu hỏi thì không làm gì cả
+
+
+        //tính các gợi ý dựa trên dữ liệu câu hỏi
+        let hints = 4; //số hint tối đa
+        if(length < 5) hints = 1;
+        else if(length < 8) hints = 2;
+        else if(length < 10) hints = 3;
+
+        //khởi tạo các mảng gợi ý và dữ liệu nền
+        const newRandomIndex = [];
+        const newValue = new Array(length).fill(''); //khởi tạo mảng giá trị với độ dài bằng length và giá trị là rỗng
+        console.log(data, newValue);
+        while (newRandomIndex.length < hints) {
+            const randomIndex = Math.floor(Math.random() * length);
+            if (!newRandomIndex.includes(randomIndex)) {
+                newRandomIndex.push(randomIndex);
+                newValue[randomIndex] = data[randomIndex]; //gán giá trị gợi ý vào mảng value
             }
         }
+
+        console.log(randomIndex, newRandomIndex);
+
+        //cập nhật lại state
+        setRandomIndex(newRandomIndex);
+        setValue(newValue);
+
     }, [data]);
 
-    // Reset khi game kết thúc
-    useEffect(() => {
-        if (resetTrigger) {
-            setValue([]);
-            setRandomIndex([]);
-        }
-    }, [resetTrigger]);
-
-    // function targetEmptyInput(currentInput) {
-    //     if(value.includes('') || value.includes(undefined)) {
-    //         console.log("ok");
-    //     }
-    // }
 
     return (
         <div>
@@ -83,7 +67,7 @@ export default function ListInput({ data, response, resetTrigger, clearInput }) 
             return (
                 <input 
                     ref={el => inputsRef.current[index] = el}
-                    className="w-10 h-10 mx-1 caret-transparent uppercase text-center text-2xl bg-slate-700 text-white border border-slate-600 rounded focus:outline-none focus:ring-2 focus:ring-slate-500"
+                    className="w-12 h-12 mx-1 caret-transparent uppercase text-center text-2xl bg-slate-700 text-white border border-slate-600 rounded focus:outline-none focus:ring-2 focus:ring-slate-500"
                     key={index}
                     maxLength={1}
                     onChange={(e) => {
@@ -94,6 +78,7 @@ export default function ListInput({ data, response, resetTrigger, clearInput }) 
                         // targetEmptyInput(index);
                     }}
                     value={randomIndex.includes(index) ? input : (value[index] || '')}
+                    // value={input}
                 />
             )
         })}

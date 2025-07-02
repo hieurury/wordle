@@ -3,7 +3,7 @@ import EasyPage from './pages/EasyPage'
 function App() {
   
   return (
-    <div>
+    <div className='min-h-screen bg-slate-800 p-12'>
       <EasyPage />
     </div>
   )

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function ListResult({answers, question, response}) {
+export default function ListResult({answers, question, response, responseTurns}) {
     const items = answers;
     const [turns, setTurns] = useState();
     
@@ -16,6 +16,7 @@ export default function ListResult({answers, question, response}) {
         if(turns === 0) {
             response(false);
         }
+        responseTurns(turns);
     }, [turns]);
 
     function checkIndex(index, item) {
@@ -54,25 +55,26 @@ export default function ListResult({answers, question, response}) {
 
     return (
         <div>
-            <h1 className='text-white'>{turns}</h1>
-            {items.map((items, index) => {
-                return (
-                    <ul 
-                        className="flex"
-                        key={index}>
-                        {items.map((child, index) => {
-                            return (
-                                <li
-                                    className={`flex justify-center items-center m-1 text-2xl uppercase rounded w-10 h-10 text-white
-                                    ${checkIndex(index, child)}`}
-                                    key={index}
-                                    data-answer={checkIndex(index, child)}
-                                >{child}</li>
-                            )
-                        })}
-                    </ul>
-                )
-            })}
+            <div className=''>
+                {items.map((items, index) => {
+                    return (
+                        <ul 
+                            className="flex"
+                            key={index}>
+                            {items.map((child, index) => {
+                                return (
+                                    <li
+                                        className={`flex justify-center items-center m-1 text-2xl uppercase rounded w-12 h-12 text-white
+                                        ${checkIndex(index, child)}`}
+                                        key={index}
+                                        data-answer={checkIndex(index, child)}
+                                    >{child}</li>
+                                )
+                            })}
+                        </ul>
+                    )
+                })}
+            </div>
         </div>
     )
 }
