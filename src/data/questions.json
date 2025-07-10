@@ -6,102 +6,926 @@
             {
                 "question": "pen",
                 "mean": "Bút mực",
-                "key": "học tập"
+                "key": "học tập",
+                "type": "noun",
+                "includes": [
+                    "<p>I write with a <span class='bg-orange-300 px-1 rounded'>pen</span>.</p>",
+                    "<p>The <span class='bg-blue-300 px-1 rounded'>pen</span> is blue.</p>",
+                    "<p>She bought a new <span class='bg-green-300 px-1 rounded'>pen</span>.</p>"
+                ]
             },
             {
                 "question": "cat",
                 "mean": "Con mèo",
-                "key": "động vật"
+                "key": "động vật",
+                "type": "noun",
+                "includes": [
+                    "<p>The <span class='bg-orange-300 px-1 rounded'>cat</span> is sleeping.</p>",
+                    "<p>My <span class='bg-blue-300 px-1 rounded'>cat</span> likes fish.</p>",
+                    "<p>A black <span class='bg-green-300 px-1 rounded'>cat</span> ran away.</p>"
+                ]
             },
             {
                 "question": "dog",
                 "mean": "Con chó",
-                "key": "động vật"
+                "key": "động vật",
+                "type": "noun",
+                "includes": [
+                    "<p>The <span class='bg-orange-300 px-1 rounded'>dog</span> is barking.</p>",
+                    "<p>I walk my <span class='bg-blue-300 px-1 rounded'>dog</span> daily.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Dogs</span> are loyal animals.</p>"
+                ]
             },
             {
                 "question": "book",
                 "mean": "Cuốn sách",
-                "key": "học tập"
+                "key": "học tập",
+                "type": "noun",
+                "includes": [
+                    "<p>I read a good <span class='bg-orange-300 px-1 rounded'>book</span>.</p>",
+                    "<p>The <span class='bg-blue-300 px-1 rounded'>book</span> is on the table.</p>",
+                    "<p>She loves reading <span class='bg-green-300 px-1 rounded'>books</span>.</p>"
+                ]
             },
             {
                 "question": "fish",
                 "mean": "Con cá",
-                "key": "động vật"
+                "key": "động vật",
+                "type": "noun",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Fish</span> swim in water.</p>",
+                    "<p>I caught a big <span class='bg-blue-300 px-1 rounded'>fish</span>.</p>",
+                    "<p>The <span class='bg-green-300 px-1 rounded'>fish</span> is fresh.</p>"
+                ]
             },
             {
                 "question": "car",
                 "mean": "Xe hơi",
-                "key": "phương tiện"
+                "key": "phương tiện",
+                "type": "noun",
+                "includes": [
+                    "<p>My <span class='bg-orange-300 px-1 rounded'>car</span> is red.</p>",
+                    "<p>He drives a new <span class='bg-blue-300 px-1 rounded'>car</span>.</p>",
+                    "<p>The <span class='bg-green-300 px-1 rounded'>car</span> is fast.</p>"
+                ]
             },
             {
                 "question": "sun",
                 "mean": "Mặt trời",
-                "key": "thiên nhiên"
+                "key": "thiên nhiên",
+                "type": "noun",
+                "includes": [
+                    "<p>The <span class='bg-orange-300 px-1 rounded'>sun</span> is bright.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Sun</span> rises in the east.</p>",
+                    "<p>I love sunny days.</p>"
+                ]
             },
             {
                 "question": "moon",
                 "mean": "Mặt trăng",
-                "key": "thiên nhiên"
+                "key": "thiên nhiên",
+                "type": "noun",
+                "includes": [
+                    "<p>The <span class='bg-orange-300 px-1 rounded'>moon</span> is full tonight.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Moon</span> shines at night.</p>",
+                    "<p>I see the <span class='bg-green-300 px-1 rounded'>moon</span> clearly.</p>"
+                ]
             },
             {
                 "question": "tree",
                 "mean": "Cây cối",
-                "key": "thiên nhiên"
+                "key": "thiên nhiên",
+                "type": "noun",
+                "includes": [
+                    "<p>The <span class='bg-orange-300 px-1 rounded'>tree</span> is tall.</p>",
+                    "<p>Birds live in <span class='bg-blue-300 px-1 rounded'>trees</span>.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Trees</span> give us oxygen.</p>"
+                ]
             },
             {
                 "question": "home",
                 "mean": "Ngôi nhà",
-                "key": "nơi ở"
+                "key": "nơi ở",
+                "type": "noun",
+                "includes": [
+                    "<p>I am going <span class='bg-orange-300 px-1 rounded'>home</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Home</span> is where family is.</p>",
+                    "<p>My <span class='bg-green-300 px-1 rounded'>home</span> is beautiful.</p>"
+                ]
             },
             {
                 "question": "door",
                 "mean": "Cửa ra vào",
-                "key": "nội thất"
+                "key": "nội thất",
+                "type": "noun",
+                "includes": [
+                    "<p>Please close the <span class='bg-orange-300 px-1 rounded'>door</span>.</p>",
+                    "<p>The <span class='bg-blue-300 px-1 rounded'>door</span> is open.</p>",
+                    "<p>He knocked on the <span class='bg-green-300 px-1 rounded'>door</span>.</p>"
+                ]
             },
             {
                 "question": "hand",
                 "mean": "Bàn tay",
-                "key": "cơ thể"
+                "key": "cơ thể",
+                "type": "noun",
+                "includes": [
+                    "<p>Wash your <span class='bg-orange-300 px-1 rounded'>hands</span> clean.</p>",
+                    "<p>She has small <span class='bg-blue-300 px-1 rounded'>hands</span>.</p>",
+                    "<p>Raise your <span class='bg-green-300 px-1 rounded'>hand</span> up.</p>"
+                ]
             },
             {
                 "question": "head",
                 "mean": "Đầu",
-                "key": "cơ thể"
+                "key": "cơ thể",
+                "type": "noun",
+                "includes": [
+                    "<p>My <span class='bg-orange-300 px-1 rounded'>head</span> hurts today.</p>",
+                    "<p>Nod your <span class='bg-blue-300 px-1 rounded'>head</span> yes.</p>",
+                    "<p>He has a big <span class='bg-green-300 px-1 rounded'>head</span>.</p>"
+                ]
             },
             {
                 "question": "food",
                 "mean": "Thức ăn",
-                "key": "ăn uống"
+                "key": "ăn uống",
+                "type": "noun",
+                "includes": [
+                    "<p>The <span class='bg-orange-300 px-1 rounded'>food</span> is delicious.</p>",
+                    "<p>I need some <span class='bg-blue-300 px-1 rounded'>food</span>.</p>",
+                    "<p>Fast <span class='bg-green-300 px-1 rounded'>food</span> is unhealthy.</p>"
+                ]
             },
             {
                 "question": "milk",
                 "mean": "Sữa",
-                "key": "ăn uống"
+                "key": "ăn uống",
+                "type": "noun",
+                "includes": [
+                    "<p>Drink your <span class='bg-orange-300 px-1 rounded'>milk</span> daily.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Milk</span> is white liquid.</p>",
+                    "<p>Children need fresh <span class='bg-green-300 px-1 rounded'>milk</span>.</p>"
+                ]
             },
             {
                 "question": "red",
                 "mean": "Màu đỏ",
-                "key": "màu sắc"
+                "key": "màu sắc",
+                "type": "adjective",
+                "includes": [
+                    "<p>Her dress is <span class='bg-orange-300 px-1 rounded'>red</span>.</p>",
+                    "<p>I like <span class='bg-blue-300 px-1 rounded'>red</span> roses.</p>",
+                    "<p>The <span class='bg-green-300 px-1 rounded'>red</span> car stopped.</p>"
+                ]
             },
             {
                 "question": "blue",
                 "mean": "Màu xanh",
-                "key": "màu sắc"
+                "key": "màu sắc",
+                "type": "adjective",
+                "includes": [
+                    "<p>The sky is <span class='bg-orange-300 px-1 rounded'>blue</span>.</p>",
+                    "<p>He wears <span class='bg-blue-300 px-1 rounded'>blue</span> jeans.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Blue</span> is my color.</p>"
+                ]
             },
             {
                 "question": "big",
                 "mean": "To lớn",
-                "key": "tính từ"
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>That is a <span class='bg-orange-300 px-1 rounded'>big</span> house.</p>",
+                    "<p>Elephants are very <span class='bg-blue-300 px-1 rounded'>big</span>.</p>",
+                    "<p>I have <span class='bg-green-300 px-1 rounded'>big</span> dreams.</p>"
+                ]
             },
             {
                 "question": "old",
                 "mean": "Già, cũ",
-                "key": "tính từ"
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>My grandfather is <span class='bg-orange-300 px-1 rounded'>old</span>.</p>",
+                    "<p>This is an <span class='bg-blue-300 px-1 rounded'>old</span> book.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Old</span> cars need repair.</p>"
+                ]
             },
             {
                 "question": "new",
                 "mean": "Mới",
-                "key": "tính từ"
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>I bought <span class='bg-orange-300 px-1 rounded'>new</span> shoes.</p>",
+                    "<p>This is a <span class='bg-blue-300 px-1 rounded'>new</span> idea.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>New</span> students are coming.</p>"
+                ]
+            },
+            {
+                "question": "run",
+                "mean": "Chạy",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>run</span> every morning.</p>",
+                    "<p>Children <span class='bg-blue-300 px-1 rounded'>run</span> in park.</p>",
+                    "<p>Dogs <span class='bg-green-300 px-1 rounded'>run</span> very fast.</p>"
+                ]
+            },
+            {
+                "question": "walk",
+                "mean": "Đi bộ",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>Let's <span class='bg-orange-300 px-1 rounded'>walk</span> to school.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>walk</span> my dog.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Walk</span> slowly and safely.</p>"
+                ]
+            },
+            {
+                "question": "eat",
+                "mean": "Ăn",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>eat</span> breakfast daily.</p>",
+                    "<p>Cats <span class='bg-blue-300 px-1 rounded'>eat</span> fish meat.</p>",
+                    "<p>Don't <span class='bg-green-300 px-1 rounded'>eat</span> too much.</p>"
+                ]
+            },
+            {
+                "question": "come",
+                "mean": "Đến",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Come</span> here please.</p>",
+                    "<p>They <span class='bg-blue-300 px-1 rounded'>come</span> from Japan.</p>",
+                    "<p>Spring will <span class='bg-green-300 px-1 rounded'>come</span> soon.</p>"
+                ]
+            },
+            {
+                "question": "see",
+                "mean": "Nhìn thấy",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>see</span> a bird.</p>",
+                    "<p>Can you <span class='bg-blue-300 px-1 rounded'>see</span> me?</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>See</span> you tomorrow.</p>"
+                ]
+            },
+            {
+                "question": "look",
+                "mean": "Nhìn",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Look</span> at the sky.</p>",
+                    "<p>You <span class='bg-blue-300 px-1 rounded'>look</span> beautiful today.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Look</span> before you cross.</p>"
+                ]
+            },
+            {
+                "question": "hear",
+                "mean": "Nghe",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>hear</span> music playing.</p>",
+                    "<p>Can you <span class='bg-blue-300 px-1 rounded'>hear</span> me?</p>",
+                    "<p>Listen and you'll <span class='bg-green-300 px-1 rounded'>hear</span>.</p>"
+                ]
+            },
+            {
+                "question": "talk",
+                "mean": "Nói chuyện",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>Let's <span class='bg-orange-300 px-1 rounded'>talk</span> about it.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>talk</span> to friends.</p>",
+                    "<p>Please <span class='bg-green-300 px-1 rounded'>talk</span> slowly.</p>"
+                ]
+            },
+            {
+                "question": "say",
+                "mean": "Nói",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Say</span> hello to her.</p>",
+                    "<p>What did you <span class='bg-blue-300 px-1 rounded'>say</span>?</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Say</span> it again please.</p>"
+                ]
+            },
+            {
+                "question": "know",
+                "mean": "Biết",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>know</span> the answer.</p>",
+                    "<p>Do you <span class='bg-blue-300 px-1 rounded'>know</span> him?</p>",
+                    "<p>I don't <span class='bg-green-300 px-1 rounded'>know</span> why.</p>"
+                ]
+            },
+            {
+                "question": "love",
+                "mean": "Yêu",
+                "key": "cảm xúc",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>love</span> my family.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Love</span> is beautiful feeling.</p>",
+                    "<p>They <span class='bg-green-300 px-1 rounded'>love</span> each other.</p>"
+                ]
+            },
+            {
+                "question": "like",
+                "mean": "Thích",
+                "key": "cảm xúc",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>like</span> ice cream.</p>",
+                    "<p>Do you <span class='bg-blue-300 px-1 rounded'>like</span> movies?</p>",
+                    "<p>She <span class='bg-green-300 px-1 rounded'>likes</span> reading books.</p>"
+                ]
+            },
+            {
+                "question": "want",
+                "mean": "Muốn",
+                "key": "cảm xúc",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>want</span> some water.</p>",
+                    "<p>What do you <span class='bg-blue-300 px-1 rounded'>want</span>?</p>",
+                    "<p>Children <span class='bg-green-300 px-1 rounded'>want</span> new toys.</p>"
+                ]
+            },
+            {
+                "question": "need",
+                "mean": "Cần",
+                "key": "cảm xúc",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>need</span> your help.</p>",
+                    "<p>Plants <span class='bg-blue-300 px-1 rounded'>need</span> water daily.</p>",
+                    "<p>We <span class='bg-green-300 px-1 rounded'>need</span> more time.</p>"
+                ]
+            },
+            {
+                "question": "give",
+                "mean": "Cho",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Give</span> me the book.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>give</span> you advice.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Give</span> it a try.</p>"
+                ]
+            },
+            {
+                "question": "take",
+                "mean": "Lấy",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Take</span> this with you.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>take</span> the bus.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Take</span> your time.</p>"
+                ]
+            },
+            {
+                "question": "make",
+                "mean": "Làm",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>make</span> breakfast daily.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Make</span> a good choice.</p>",
+                    "<p>Let's <span class='bg-green-300 px-1 rounded'>make</span> it together.</p>"
+                ]
+            },
+            {
+                "question": "work",
+                "mean": "Làm việc",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>I <span class='bg-orange-300 px-1 rounded'>work</span> in office.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Work</span> hard for success.</p>",
+                    "<p>This plan will <span class='bg-green-300 px-1 rounded'>work</span>.</p>"
+                ]
+            },
+            {
+                "question": "play",
+                "mean": "Chơi",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>Children <span class='bg-orange-300 px-1 rounded'>play</span> in park.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>play</span> guitar well.</p>",
+                    "<p>Let's <span class='bg-green-300 px-1 rounded'>play</span> a game.</p>"
+                ]
+            },
+            {
+                "question": "help",
+                "mean": "Giúp đỡ",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>Can you <span class='bg-orange-300 px-1 rounded'>help</span> me?</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>help</span> my mother.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Help</span> others when possible.</p>"
+                ]
+            },
+            {
+                "question": "get",
+                "mean": "Lấy, nhận",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Get</span> your coat ready.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>get</span> up early.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Get</span> well soon.</p>"
+                ]
+            },
+            {
+                "question": "put",
+                "mean": "Đặt",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Put</span> it on table.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>put</span> on clothes.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Put</span> your hands up.</p>"
+                ]
+            },
+            {
+                "question": "sit",
+                "mean": "Ngồi",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>Please <span class='bg-orange-300 px-1 rounded'>sit</span> down here.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>sit</span> on chair.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Sit</span> still and listen.</p>"
+                ]
+            },
+            {
+                "question": "bad",
+                "mean": "Xấu, tệ",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>That's a <span class='bg-orange-300 px-1 rounded'>bad</span> idea.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Bad</span> weather today.</p>",
+                    "<p>Don't do <span class='bg-green-300 px-1 rounded'>bad</span> things.</p>"
+                ]
+            },
+            {
+                "question": "good",
+                "mean": "Tốt",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>You are very <span class='bg-orange-300 px-1 rounded'>good</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Good</span> morning to you.</p>",
+                    "<p>This is <span class='bg-green-300 px-1 rounded'>good</span> news.</p>"
+                ]
+            },
+            {
+                "question": "hot",
+                "mean": "Nóng",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>The coffee is <span class='bg-orange-300 px-1 rounded'>hot</span>.</p>",
+                    "<p>Today is very <span class='bg-blue-300 px-1 rounded'>hot</span>.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Hot</span> weather makes tired.</p>"
+                ]
+            },
+            {
+                "question": "cold",
+                "mean": "Lạnh",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>Winter is very <span class='bg-orange-300 px-1 rounded'>cold</span>.</p>",
+                    "<p>Drink <span class='bg-blue-300 px-1 rounded'>cold</span> water.</p>",
+                    "<p>My hands are <span class='bg-green-300 px-1 rounded'>cold</span>.</p>"
+                ]
+            },
+            {
+                "question": "long",
+                "mean": "Dài",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>She has <span class='bg-orange-300 px-1 rounded'>long</span> hair.</p>",
+                    "<p>This is <span class='bg-blue-300 px-1 rounded'>long</span> road.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Long</span> time no see.</p>"
+                ]
+            },
+            {
+                "question": "fast",
+                "mean": "Nhanh",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>Cars go very <span class='bg-orange-300 px-1 rounded'>fast</span>.</p>",
+                    "<p>Eat <span class='bg-blue-300 px-1 rounded'>fast</span> food daily.</p>",
+                    "<p>Time goes so <span class='bg-green-300 px-1 rounded'>fast</span>.</p>"
+                ]
+            },
+            {
+                "question": "slow",
+                "mean": "Chậm",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>Walk <span class='bg-orange-300 px-1 rounded'>slow</span> and safe.</p>",
+                    "<p>My computer is <span class='bg-blue-300 px-1 rounded'>slow</span>.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Slow</span> down your speed.</p>"
+                ]
+            },
+            {
+                "question": "high",
+                "mean": "Cao",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>Mountains are very <span class='bg-orange-300 px-1 rounded'>high</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>High</span> prices these days.</p>",
+                    "<p>Jump as <span class='bg-green-300 px-1 rounded'>high</span> possible.</p>"
+                ]
+            },
+            {
+                "question": "low",
+                "mean": "Thấp",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>Speak in <span class='bg-orange-300 px-1 rounded'>low</span> voice.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Low</span> prices today only.</p>",
+                    "<p>The chair is <span class='bg-green-300 px-1 rounded'>low</span>.</p>"
+                ]
+            },
+            {
+                "question": "easy",
+                "mean": "Dễ",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>Math is very <span class='bg-orange-300 px-1 rounded'>easy</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Easy</span> questions for beginners.</p>",
+                    "<p>Take it <span class='bg-green-300 px-1 rounded'>easy</span> now.</p>"
+                ]
+            },
+            {
+                "question": "hard",
+                "mean": "Khó, cứng",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>This test is <span class='bg-orange-300 px-1 rounded'>hard</span>.</p>",
+                    "<p>Work <span class='bg-blue-300 px-1 rounded'>hard</span> every day.</p>",
+                    "<p>The rock is <span class='bg-green-300 px-1 rounded'>hard</span>.</p>"
+                ]
+            },
+            {
+                "question": "nice",
+                "mean": "Đẹp, tốt",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>You look very <span class='bg-orange-300 px-1 rounded'>nice</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Nice</span> weather for walking.</p>",
+                    "<p>Have a <span class='bg-green-300 px-1 rounded'>nice</span> day.</p>"
+                ]
+            },
+            {
+                "question": "dark",
+                "mean": "Tối",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>The room is <span class='bg-orange-300 px-1 rounded'>dark</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Dark</span> clouds in sky.</p>",
+                    "<p>I fear <span class='bg-green-300 px-1 rounded'>dark</span> places.</p>"
+                ]
+            },
+            {
+                "question": "fun",
+                "mean": "Vui vẻ",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>The party was <span class='bg-orange-300 px-1 rounded'>fun</span>.</p>",
+                    "<p>Have <span class='bg-blue-300 px-1 rounded'>fun</span> at school.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Fun</span> games for children.</p>"
+                ]
+            },
+            {
+                "question": "sad",
+                "mean": "Buồn",
+                "key": "cảm xúc",
+                "type": "adjective",
+                "includes": [
+                    "<p>I feel very <span class='bg-orange-300 px-1 rounded'>sad</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Sad</span> news from home.</p>",
+                    "<p>Don't be <span class='bg-green-300 px-1 rounded'>sad</span> today.</p>"
+                ]
+            },
+            {
+                "question": "mad",
+                "mean": "Tức giận",
+                "key": "cảm xúc",
+                "type": "adjective",
+                "includes": [
+                    "<p>Why are you <span class='bg-orange-300 px-1 rounded'>mad</span>?</p>",
+                    "<p>Don't make me <span class='bg-blue-300 px-1 rounded'>mad</span>.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Mad</span> people shout loudly.</p>"
+                ]
+            },
+            {
+                "question": "glad",
+                "mean": "Vui mừng",
+                "key": "cảm xúc",
+                "type": "adjective",
+                "includes": [
+                    "<p>I'm <span class='bg-orange-300 px-1 rounded'>glad</span> you came.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Glad</span> to meet you.</p>",
+                    "<p>She looks very <span class='bg-green-300 px-1 rounded'>glad</span>.</p>"
+                ]
+            },
+            {
+                "question": "open",
+                "mean": "Mở",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Open</span> the door please.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Open</span> your book now.</p>",
+                    "<p>The store is <span class='bg-green-300 px-1 rounded'>open</span>.</p>"
+                ]
+            },
+            {
+                "question": "shut",
+                "mean": "Đóng",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Shut</span> the window tight.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Shut</span> your eyes now.</p>",
+                    "<p>The door <span class='bg-green-300 px-1 rounded'>shut</span> loudly.</p>"
+                ]
+            },
+            {
+                "question": "stop",
+                "mean": "Dừng lại",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Stop</span> at red light.</p>",
+                    "<p>Please <span class='bg-blue-300 px-1 rounded'>stop</span> talking now.</p>",
+                    "<p>The bus will <span class='bg-green-300 px-1 rounded'>stop</span>.</p>"
+                ]
+            },
+            {
+                "question": "turn",
+                "mean": "Quay",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Turn</span> left at corner.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Turn</span> on the lights.</p>",
+                    "<p>It's your <span class='bg-green-300 px-1 rounded'>turn</span> now.</p>"
+                ]
+            },
+            {
+                "question": "move",
+                "mean": "Di chuyển",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Move</span> to new house.</p>",
+                    "<p>Don't <span class='bg-blue-300 px-1 rounded'>move</span> at all.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Move</span> your chair closer.</p>"
+                ]
+            },
+            {
+                "question": "jump",
+                "mean": "Nhảy",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Jump</span> over the fence.</p>",
+                    "<p>Children <span class='bg-blue-300 px-1 rounded'>jump</span> rope daily.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Jump</span> as high possible.</p>"
+                ]
+            },
+            {
+                "question": "swim",
+                "mean": "Bơi",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>Fish <span class='bg-orange-300 px-1 rounded'>swim</span> in water.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>swim</span> every morning.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Swim</span> to the shore.</p>"
+                ]
+            },
+            {
+                "question": "fly",
+                "mean": "Bay",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>Birds <span class='bg-orange-300 px-1 rounded'>fly</span> in sky.</p>",
+                    "<p>I <span class='bg-blue-300 px-1 rounded'>fly</span> to Japan.</p>",
+                    "<p>Planes <span class='bg-green-300 px-1 rounded'>fly</span> very high.</p>"
+                ]
+            },
+            {
+                "question": "fall",
+                "mean": "Rơi",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>Leaves <span class='bg-orange-300 px-1 rounded'>fall</span> in autumn.</p>",
+                    "<p>Don't <span class='bg-blue-300 px-1 rounded'>fall</span> from tree.</p>",
+                    "<p>I <span class='bg-green-300 px-1 rounded'>fall</span> down stairs.</p>"
+                ]
+            },
+            {
+                "question": "rise",
+                "mean": "Tăng lên",
+                "key": "hành động",
+                "type": "verb",
+                "includes": [
+                    "<p>Sun <span class='bg-orange-300 px-1 rounded'>rises</span> every morning.</p>",
+                    "<p>Prices <span class='bg-blue-300 px-1 rounded'>rise</span> this month.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Rise</span> and shine early.</p>"
+                ]
+            },
+            {
+                "question": "safe",
+                "mean": "An toàn",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>Drive <span class='bg-orange-300 px-1 rounded'>safe</span> on roads.</p>",
+                    "<p>This place is <span class='bg-blue-300 px-1 rounded'>safe</span>.</p>",
+                    "<p>Keep your money <span class='bg-green-300 px-1 rounded'>safe</span>.</p>"
+                ]
+            },
+            {
+                "question": "sick",
+                "mean": "Ốm",
+                "key": "sức khỏe",
+                "type": "adjective",
+                "includes": [
+                    "<p>I feel very <span class='bg-orange-300 px-1 rounded'>sick</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Sick</span> people need rest.</p>",
+                    "<p>Don't go <span class='bg-green-300 px-1 rounded'>sick</span> today.</p>"
+                ]
+            },
+            {
+                "question": "well",
+                "mean": "Khỏe mạnh",
+                "key": "sức khỏe",
+                "type": "adjective",
+                "includes": [
+                    "<p>I am very <span class='bg-orange-300 px-1 rounded'>well</span>.</p>",
+                    "<p>Get <span class='bg-blue-300 px-1 rounded'>well</span> soon please.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Well</span> people exercise daily.</p>"
+                ]
+            },
+            {
+                "question": "rich",
+                "mean": "Giàu có",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Rich</span> people help others.</p>",
+                    "<p>She comes from <span class='bg-blue-300 px-1 rounded'>rich</span>.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Rich</span> food has flavor.</p>"
+                ]
+            },
+            {
+                "question": "poor",
+                "mean": "Nghèo",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Poor</span> people need help.</p>",
+                    "<p>I have <span class='bg-blue-300 px-1 rounded'>poor</span> memory.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Poor</span> weather this week.</p>"
+                ]
+            },
+            {
+                "question": "free",
+                "mean": "Tự do",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>Birds are born <span class='bg-orange-300 px-1 rounded'>free</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Free</span> time for hobbies.</p>",
+                    "<p>This service is <span class='bg-green-300 px-1 rounded'>free</span>.</p>"
+                ]
+            },
+            {
+                "question": "busy",
+                "mean": "Bận rộn",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>I am very <span class='bg-orange-300 px-1 rounded'>busy</span>.</p>",
+                    "<p><span class='bg-blue-300 px-1 rounded'>Busy</span> people work hard.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Busy</span> streets have traffic.</p>"
+                ]
+            },
+            {
+                "question": "full",
+                "mean": "Đầy",
+                "key": "tính từ",
+                "type": "adjective",
+                "includes": [
+                    "<p>My stomach is <span class='bg-orange-300 px-1 rounded'>full</span>.</p>",
+                    "<p>The bus is <span class='bg-blue-300 px-1 rounded'>full</span>.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Full</span> moon shines bright.</p>"
+                ]
+            },
+            {
+                "question": "near",
+                "mean": "Gần",
+                "key": "vị trí",
+                "type": "adjective",
+                "includes": [
+                    "<p>The store is <span class='bg-orange-300 px-1 rounded'>near</span>.</p>",
+                    "<p>Come <span class='bg-blue-300 px-1 rounded'>near</span> to me.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Near</span> future looks bright.</p>"
+                ]
+            },
+            {
+                "question": "far",
+                "mean": "Xa",
+                "key": "vị trí",
+                "type": "adjective",
+                "includes": [
+                    "<p>My home is <span class='bg-orange-300 px-1 rounded'>far</span>.</p>",
+                    "<p>How <span class='bg-blue-300 px-1 rounded'>far</span> is it?</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Far</span> away from here.</p>"
+                ]
+            },
+            {
+                "question": "left",
+                "mean": "Trái",
+                "key": "vị trí",
+                "type": "adjective",
+                "includes": [
+                    "<p>Turn <span class='bg-orange-300 px-1 rounded'>left</span> at corner.</p>",
+                    "<p>My <span class='bg-blue-300 px-1 rounded'>left</span> hand hurts.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Left</span> side is empty.</p>"
+                ]
+            },
+            {
+                "question": "out",
+                "mean": "Ngoài",
+                "key": "vị trí",
+                "type": "adverb",
+                "includes": [
+                    "<p>Go <span class='bg-orange-300 px-1 rounded'>out</span> and play.</p>",
+                    "<p>Take <span class='bg-blue-300 px-1 rounded'>out</span> the trash.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Out</span> of my way.</p>"
+                ]
+            },
+            {
+                "question": "off",
+                "mean": "Tắt",
+                "key": "vị trí",
+                "type": "adverb",
+                "includes": [
+                    "<p>Turn <span class='bg-orange-300 px-1 rounded'>off</span> the TV.</p>",
+                    "<p>Take <span class='bg-blue-300 px-1 rounded'>off</span> your shoes.</p>",
+                    "<p>Day <span class='bg-green-300 px-1 rounded'>off</span> from work.</p>"
+                ]
+            },
+            {
+                "question": "yes",
+                "mean": "Có",
+                "key": "trả lời",
+                "type": "interjection",
+                "includes": [
+                    "<p><span class='bg-orange-300 px-1 rounded'>Yes</span>, I agree completely.</p>",
+                    "<p>Say <span class='bg-blue-300 px-1 rounded'>yes</span> to life.</p>",
+                    "<p><span class='bg-green-300 px-1 rounded'>Yes</span> or no question.</p>"
+                ]
             }
         ]
     }

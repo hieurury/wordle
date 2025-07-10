@@ -20,7 +20,7 @@ export default function ListResult({answers, question, response, responseTurns})
     }, [turns]);
 
     function checkIndex(index, item) {
-        if(question[index] == item) return 'bg-green-600';
+        if(question[index] == item) return 'bg-green-600 animate-pulse';
         if(question.includes(item)) return 'bg-orange-400';
         else return 'bg-red-600';
     }
@@ -44,11 +44,11 @@ export default function ListResult({answers, question, response, responseTurns})
     function initTurnGame(question) {
         switch (true) {
             case question.length <= 4:
-                return 3;
-            case question.length <= 7:
                 return 5;
-            default:
+            case question.length <= 7:
                 return 7;
+            default:
+                return 9;
         }
     }
 

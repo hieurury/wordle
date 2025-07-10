@@ -3,11 +3,12 @@ import { useState } from "react";
 
 export default function ToggleTheme({ toggleTheme }) {
 
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false || localStorage.getItem('theme') === 'dark');
 
     const handleToggle = () => {
         setIsDarkMode(!isDarkMode);
-        toggleTheme();
+        localStorage.setItem('theme', !isDarkMode ? 'dark' : 'light'); // Lưu trạng thái vào localStorage
+        toggleTheme(); // Gọi hàm toggleTheme nếu có
     }
 
     // Thêm class cho body để thay đổi giao diện

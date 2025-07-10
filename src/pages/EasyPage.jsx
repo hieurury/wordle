@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import ListInput from '../components/ListInput'
 import ListResult from '../components/ListResult'
+import ModalResult from '../components/modalResult'
+import ModalTotal from '../components/ModalTotal'
 import questionsData from '../data/questions.json'
 
 const PAGE_LEVEL = 'easy';
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 3;
 
 function EasyPage() {
   //lấy dữ liệu từ JSON
@@ -38,10 +40,8 @@ function EasyPage() {
 
     if(gameWin && gameResult) {
       nearQuestion = {...odQuestions[odQuestions.length - 1], status: 1};
-      resetGame();
     } else if(gameResult && !gameWin) {
       nearQuestion = {...odQuestions[odQuestions.length - 1], status: 0};
-      resetGame();
     }
     //tim object rỗng đầu tiên trong mảng questionsPlayed
     const emptyIndex = questionsPlayed.findIndex(item => Object.keys(item).length === 0);
@@ -54,13 +54,14 @@ function EasyPage() {
   }, [gameResult]);
 
   //reset lại màn chơi khi questionPlayed đầy
-  useEffect(() => {
-    const emptyIndex = questionsPlayed.findIndex(item => Object.keys(item).length === 0);
-    if(emptyIndex === -1) {
-      setQuestionsPlayed(new Array(MAX_QUESTIONS).fill({}));
-    }
-  }, [questionsPlayed]);
+  // useEffect(() => {
+  //   const emptyIndex = questionsPlayed.findIndex(item => Object.keys(item).length === 0);
+  //   if(emptyIndex === -1) {
+  //     setQuestionsPlayed(new Array(MAX_QUESTIONS).fill({}));
+  //   }
+  // }, [questionsPlayed]);
 
+  //kiểm tra đã nhập hết input chưa
   useEffect(() => {
     if(response.length > 0 && !response.includes(undefined) && !response.includes('') && response.length === question.length) {
       setSubmit(true);
@@ -73,6 +74,8 @@ function EasyPage() {
     }
   }, [response]);
   
+
+  //reset lại các giá trị khi chơi từ mới
   function resetGame() {
     setResponse([]);
     setAnswer([]);
@@ -87,11 +90,6 @@ function EasyPage() {
     
   }
 
-  // useEffect(() => {
-  //   if(odQuestions && odQuestions.length >= MAX_QUESTIONS) {
-  //     resetGame();
-  //   }
-  // }, [odQuestions]);
 
   function randomQuestion(data) {
     if(odQuestions && odQuestions.length == data.length) {
@@ -126,9 +124,31 @@ function EasyPage() {
 
   return (
       <div className='grid lg:grid-cols-3 grid-cols-1 dark:bg-slate-800 bg-white min-h-screen'>
+        {gameResult && (
+          <ModalResult 
+            isOpen={gameResult}
+            type={gameWin}
+            question={odQuestions[odQuestions.length - 1]}
+            action={resetGame}
+          />
+        )}
+
+        {/* các ô câu hỏi điều đã được chơi rồi */}
+        {
+          <ModalTotal 
+            isOpen={questionsPlayed.findIndex(item => Object.keys(item).length === 0) !== -1 ? false : true}
+            data={questionsPlayed}
+            action={() => {
+              setQuestionsPlayed(new Array(MAX_QUESTIONS).fill({})); // reset questionsPlayed
+            }}
+          />
+        }
         <div className="mb-6 text-center py-12 px-4 col-span-2">
           <h1 className='uppercase text-6xl p-2 text-slate-700 dar:text-slate-500 font-bold'>wordle rury</h1>
-          <h1 className='text-xl italic font-bold my-4 text-sky-600'>Chủ đề: {fullValueQuestions.key}</h1>
+          <div className='flex justify-center items-center space-x-2 text-lg my-2 text-slate-500 dark:text-slate-400'>
+            <span className='font-bold'>🔑Gợi ý:</span>
+            <span className='text-yellow-500'>{fullValueQuestions.key}</span>
+          </div>
             <ListInput 
               data={question} 
               response={(data) => {
@@ -137,24 +157,34 @@ function EasyPage() {
               clearInput={clearInput}
             />
             
-            <button 
-              className={
-                `mt-4 px-4 py-2 text-white rounded cursor-pointer relative
-                  ${submit ? 'bg-green-600' : 'bg-gray-600 pointer-events-none'}
-                `
-              }
-              onClick={() => {
-                const newAnswer = response;
-                setAnswer([...answer, newAnswer]);
-                setClearInput(true);
-              }}
-              disabled={!submit}
-            >Chắc đúng rồi 
-            <span className='
-              absolute w-4 h-4 flex justify-center items-center text-sm -top-2 -right-2 bg-orange-700 rounded-full
-              '>{currentTurns}
-            </span>
-            </button>
+            <div className='flex flex-col justify-center items-center space-y-2'>
+              <button 
+                className={
+                  `mt-4 px-4 py-2 text-white rounded cursor-pointer relative
+                    ${submit ? 'bg-green-600' : 'bg-gray-600 pointer-events-none'}
+                  `
+                }
+                onClick={() => {
+                  const newAnswer = response;
+                  setAnswer([...answer, newAnswer]);
+                  setClearInput(true);
+                }}
+                disabled={!submit}
+              >Chắc đúng rồi 
+              <span className='
+                absolute w-4 h-4 flex justify-center items-center text-sm -top-2 -right-2 bg-orange-700 rounded-full
+                '>{currentTurns}
+              </span>
+              </button>
+              <button 
+                onClick={() => {
+                  setClearInput(true);
+                  setResponse([]);
+                  setGameResult(true);
+                  setGameWin(false);
+                }}
+                className='bg-red-700 p-1 px-2 rounded-md dark:text-white'>Khum biết</button>
+            </div>
             
             <div className='flex justify-center items-center border-t-2 border-slate-200 bg-transparent p-4 mt-4 w-full'>
               <ListResult 
@@ -171,7 +201,7 @@ function EasyPage() {
             </div>
         </div>
         <div className='dark:bg-slate-900 bg-white border-l-2 border-slate-600 p-6'>
-          <h1 className='text-2xl uppercase font-bold dark:text-slate-600'>Giai đoạn</h1>
+          <h1 className='text-2xl uppercase font-bold dark:text-slate-600'>Tiến độ</h1>
           <ul className='grid grid-cols-5 gap-2'>
             {questionsPlayed.map((item, index) => (
               <li 
