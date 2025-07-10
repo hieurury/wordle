@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ListInput from '../components/ListInput'
 import ListResult from '../components/ListResult'
-import ModalResult from '../components/modalResult'
+import ModalResult from '../components/ModalResult'
 import ModalTotal from '../components/ModalTotal'
 import questionsData from '../data/questions.json'
 
