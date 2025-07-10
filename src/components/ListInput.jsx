@@ -52,8 +52,6 @@ export default function ListInput({ data, response, clearInput }) {
             }
         }
 
-        console.log(randomIndex, newRandomIndex);
-
         //cập nhật lại state
         setRandomIndex(newRandomIndex);
         setValue(newValue);
@@ -67,7 +65,7 @@ export default function ListInput({ data, response, clearInput }) {
             return (
                 <input 
                     ref={el => inputsRef.current[index] = el}
-                    className="w-12 h-12 mx-1 caret-transparent uppercase text-center text-2xl bg-slate-700 text-white border border-slate-600 rounded focus:outline-none focus:ring-2 focus:ring-slate-500"
+                    className="w-12 h-12 mx-1 caret-transparent uppercase text-center text-2xl dark:bg-slate-700 bg-transparent dark:text-white text-slate-800 border border-slate-600 rounded focus:outline-none focus:ring-2 focus:ring-slate-500"
                     key={index}
                     maxLength={1}
                     onChange={(e) => {

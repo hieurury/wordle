@@ -52,9 +52,14 @@ export default function ListResult({answers, question, response, responseTurns})
         }
     }
 
+    if(items.length === 0) {
+        return (
+            <h1 className='text-xl text-slate-500'>Chúc may mắn 🍀</h1>
+        )
+    }
 
     return (
-        <div>
+        <>
             <div className=''>
                 {items.map((items, index) => {
                     return (
@@ -75,6 +80,6 @@ export default function ListResult({answers, question, response, responseTurns})
                     )
                 })}
             </div>
-        </div>
+        </>
     )
 }

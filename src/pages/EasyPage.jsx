@@ -4,6 +4,7 @@ import ListResult from '../components/ListResult'
 import questionsData from '../data/questions.json'
 
 const PAGE_LEVEL = 'easy';
+const MAX_QUESTIONS = 10;
 
 function EasyPage() {
   //lấy dữ liệu từ JSON
@@ -11,7 +12,8 @@ function EasyPage() {
   const [odQuestions, setOdQuestions] = useState([]);
   const [fullValueQuestions, setFullValueQuestions] = useState([]);
   const [question, setQuestion] = useState([]);
-  
+
+
   // Load dữ liệu khi component mount
   useEffect(() => {
     const data = questionsData[PAGE_LEVEL];
@@ -28,17 +30,36 @@ function EasyPage() {
   const [gameWin, setGameWin]               = useState(false);
   const [clearInput, setClearInput]         = useState(false);
   const [currentTurns, setCurrentTurns]     = useState(null);
+  const [questionsPlayed, setQuestionsPlayed] = useState(new Array(MAX_QUESTIONS).fill({}));
 
   
   useEffect(() => {
+    let nearQuestion = {};
+
     if(gameWin && gameResult) {
-      alert('You win!');
+      nearQuestion = {...odQuestions[odQuestions.length - 1], status: 1};
       resetGame();
     } else if(gameResult && !gameWin) {
-      alert('You lose!');
+      nearQuestion = {...odQuestions[odQuestions.length - 1], status: 0};
       resetGame();
     }
+    //tim object rỗng đầu tiên trong mảng questionsPlayed
+    const emptyIndex = questionsPlayed.findIndex(item => Object.keys(item).length === 0);
+
+    //cập nhật lại câu hỏi đã chơi
+    const newQuestionsPlayed = [...questionsPlayed];
+    newQuestionsPlayed[emptyIndex] = nearQuestion;
+    setQuestionsPlayed(newQuestionsPlayed);
+
   }, [gameResult]);
+
+  //reset lại màn chơi khi questionPlayed đầy
+  useEffect(() => {
+    const emptyIndex = questionsPlayed.findIndex(item => Object.keys(item).length === 0);
+    if(emptyIndex === -1) {
+      setQuestionsPlayed(new Array(MAX_QUESTIONS).fill({}));
+    }
+  }, [questionsPlayed]);
 
   useEffect(() => {
     if(response.length > 0 && !response.includes(undefined) && !response.includes('') && response.length === question.length) {
@@ -66,6 +87,11 @@ function EasyPage() {
     
   }
 
+  // useEffect(() => {
+  //   if(odQuestions && odQuestions.length >= MAX_QUESTIONS) {
+  //     resetGame();
+  //   }
+  // }, [odQuestions]);
 
   function randomQuestion(data) {
     if(odQuestions && odQuestions.length == data.length) {
@@ -85,12 +111,24 @@ function EasyPage() {
     }
   }
 
+  function bgHandler(item) {
+    if(item.status === undefined) return 'bg-gray-200 dark:bg-slate-700';
+    if(item.status === 1) return 'bg-[url(/images/correct.png)]';
+    if(item.status === 0) return 'bg-[url(/images/wrong.png)]';
+  }
+
+  function valueHandler(item) {
+    if(item.status === undefined) return '?';
+    return item.question;
+  }
+
+
 
   return (
-      <div className='flex flex-col items-center bg-slate-800 p-12'>
-        <h1 className='uppercase text-4xl text-slate-500 font-bold my-8'>Wordle rury</h1>
-        <div className="mb-6 text-center">
-          <h1 className='text-xl text-slate-400'>Chủ đề: {fullValueQuestions.key}</h1>
+      <div className='grid lg:grid-cols-3 grid-cols-1 dark:bg-slate-800 bg-white min-h-screen'>
+        <div className="mb-6 text-center py-12 px-4 col-span-2">
+          <h1 className='uppercase text-6xl p-2 text-slate-700 dar:text-slate-500 font-bold'>wordle rury</h1>
+          <h1 className='text-xl italic font-bold my-4 text-sky-600'>Chủ đề: {fullValueQuestions.key}</h1>
             <ListInput 
               data={question} 
               response={(data) => {
@@ -118,7 +156,7 @@ function EasyPage() {
             </span>
             </button>
             
-            <div className='border-2 border-slate-600 bg-slate-900 p-4 mt-4 w-full max-w-md'>
+            <div className='flex justify-center items-center border-t-2 border-slate-200 bg-transparent p-4 mt-4 w-full'>
               <ListResult 
                 answers={answer} 
                 question={question} 
@@ -131,7 +169,22 @@ function EasyPage() {
                 }}
               />
             </div>
-      </div>
+        </div>
+        <div className='dark:bg-slate-900 bg-white border-l-2 border-slate-600 p-6'>
+          <h1 className='text-2xl uppercase font-bold dark:text-slate-600'>Giai đoạn</h1>
+          <ul className='grid grid-cols-5 gap-2'>
+            {questionsPlayed.map((item, index) => (
+              <li 
+                key={index} 
+                className={`flex justify-center items-center p-2 text-slate-400 text-md bg-cover rounded-lg bg-no-repeat shadow-md
+                  ${bgHandler(item)}
+                `}
+              >
+                <span className='flex justify-center items-center text-md italic text-white'>{valueHandler(item)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
     </div>
     
   )
