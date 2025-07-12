@@ -43,7 +43,6 @@ export default function ListInput({ data, response, clearInput }) {
         //khởi tạo các mảng gợi ý và dữ liệu nền
         const newRandomIndex = [];
         const newValue = new Array(length).fill(''); //khởi tạo mảng giá trị với độ dài bằng length và giá trị là rỗng
-        console.log(data, newValue);
         while (newRandomIndex.length < hints) {
             const randomIndex = Math.floor(Math.random() * length);
             if (!newRandomIndex.includes(randomIndex)) {
