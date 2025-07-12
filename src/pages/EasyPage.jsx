@@ -6,7 +6,7 @@ import ModalTotal from '../components/ModalTotal'
 import questionsData from '../data/questions.json'
 
 const PAGE_LEVEL = 'easy';
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 10;
 
 function EasyPage() {
   //lấy dữ liệu từ JSON
