@@ -124,6 +124,7 @@ function EasyPage() {
 
   return (
       <div className='grid lg:grid-cols-3 grid-cols-1 dark:bg-slate-800 bg-white min-h-screen'>
+        {/* hiện modal mỗi từ sau khi chơi */}
         {gameResult && (
           <ModalResult 
             isOpen={gameResult}
@@ -183,7 +184,7 @@ function EasyPage() {
                   setGameResult(true);
                   setGameWin(false);
                 }}
-                className='bg-red-700 p-1 px-2 rounded-md dark:text-white'>Khum biết</button>
+                className='bg-red-700 p-1 px-2 rounded-md text-white'>Bỏ qua</button>
             </div>
             
             <div className='flex justify-center items-center border-t-2 border-slate-200 bg-transparent p-4 mt-4 w-full'>
